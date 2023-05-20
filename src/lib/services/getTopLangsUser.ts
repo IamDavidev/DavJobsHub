@@ -1,5 +1,5 @@
-import { API_GITHUB } from '~lib/api/instances.api';
 import type { RepositoryGithubApi } from '~lib/interfaces/RepositoryGithubApi';
+import { API_GITHUB } from '~lib/api/instances.api';
 
 type ResponseApiRepos = RepositoryGithubApi[]
 

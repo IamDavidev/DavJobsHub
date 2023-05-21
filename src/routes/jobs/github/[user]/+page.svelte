@@ -1,10 +1,17 @@
 <script>
-	
+
 	export let data;
-	
+
 	const user = data.user;
 </script>
 
-<h1>
-	{user}
-</h1>
+<head>
+	<title>
+		{user} | offers
+	</title>
+</head>
+<main>
+	<h1>
+		{user}
+	</h1>
+</main>

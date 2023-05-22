@@ -30,7 +30,6 @@ export async function load({ params }: LoadParams): Promise<LoadResponseSuccess 
 
 	const [data, error] = await getOffersService(mockTopLangs);
 
-	console.log(error);
 
 	if (error !== null) {
 		return {

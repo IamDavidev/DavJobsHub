@@ -54,7 +54,7 @@ export interface OfferApiItemExtends {
 	deleted: boolean;
 	disponibleForFullVisualization: boolean;
 	availableForVisualization: boolean;
-	skillsList: SkillsList[];
+	skillsList: SkillItem[];
 	salaryDescription: string;
 }
 
@@ -90,7 +90,7 @@ export interface Profile {
 	followable: boolean;
 }
 
-export interface SkillsList {
+export interface SkillItem {
 	skill: string;
 }
 
@@ -172,11 +172,13 @@ export interface OfferModel   {
 	id: string;
 	company: CompanyOffer;
 	published: Date;
+	updatedAt: string;
 	position: string;
 	seniority?: string;
 	contractType: string;
-	tags: string[];
+	tags?: string[];
 	jobDescription: string;
+	minRequirements: string;
 	skills: string[];
 	salaryDescription: string;
 	city: string;
@@ -189,4 +191,5 @@ export interface CompanyOffer {
 	name?: string;
 	logo?: string;
 	uri?: string;
+	web?: string;
 }

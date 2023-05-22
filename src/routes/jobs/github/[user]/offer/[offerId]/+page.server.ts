@@ -1,3 +1,6 @@
+import  { error as errorPage} from '@sveltejs/kit'
+import { getOfferByIdService } from '~lib/services/getOfferById.service';
+import type { OfferModel } from '~lib/interfaces/Offer.interface';
 
 
 interface LoadParams {
@@ -6,14 +9,25 @@ interface LoadParams {
 	}
 }
 
-export function load({params: {
+interface LoadResponseSuccess {
+	status: number | string;
+	offerId: string
+	offer: OfferModel | null
+}
+
+export async  function load({params: {
 	offerId
-}}:LoadParams){
+}}:LoadParams): Promise<LoadResponseSuccess>{
 	
-	console.log(offerId)
+	const [data,error] = await getOfferByIdService(offerId)
+	
+	
+	if(error!== null) throw errorPage(404,error.error ?? "")
+	
 	return {
 		status: 200,
-		offerId
+		offerId,
+		offer: data
 	}
 	
 }

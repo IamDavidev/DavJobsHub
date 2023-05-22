@@ -1,13 +1,9 @@
 <script lang='ts'>
-	import type { LayoutData } from './$types';
-
 	import type { OfferItemAdapter } from '~lib/interfaces/Offer.interface';
 
-	export let data: LayoutData;
-
-	const offers = data.offers as OfferItemAdapter[];
-	const user = data.user as string;
-
+	export let data;
+	const offers = data?.offers as OfferItemAdapter[];
+	const user = data?.user as string;
 </script>
 
 

@@ -17,9 +17,9 @@ export async function getTopLangsUserService(user: string): Promise<responseGetT
 				per_page: 20
 			},
 			signal: abortController.signal
-		});
+		}).then(({ data }) => data);
 
-		return [topLangsAdapter(response.data as ResponseRepositories), null];
+		return [topLangsAdapter(response as ResponseRepositories), null];
 	} catch (e) {
 		abortController.abort();
 

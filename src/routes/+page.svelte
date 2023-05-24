@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import { goto } from '$app/navigation'
-	
+
 	let githubUser = 'midudev'
 	let isUserFound = false
 
@@ -12,6 +12,12 @@
 	}
 
 </script>
+
+
+<svelte:head>
+	<title> DavJobsHub </title>
+	<meta name='description' content='DavJobsHub is a job board for developers' />
+</svelte:head>
 
 <h1 class='text-center text-3xl font-bold text-green'>
 	DavJobsHub

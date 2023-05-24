@@ -1,29 +1,24 @@
 <script lang='ts'>
 	import type { OfferItemAdapter } from '~lib/interfaces/Offer.interface'
+	import OfferItem from '~routes/jobs/github/[user]/components/OfferItem.svelte'
 
 	export let data
 
 	const error = data?.error as string
 
-	const offers = data?.offers as OfferItemAdapter[]
-	const user = data?.user as string
+	const offers = data?.offers as OfferItemAdapter[] ?? []
+	const user = data?.user as string ?? ''
+	
+	console.log(offers)
 </script>
 
-
 {#if !error}
-	<div class='flex flex-row justify-between items-start'>
-		<section>
-			<ul>
-				{#each offers as { position, id }}
-					<li>
-						<a href={`/jobs/github/${user}/offer/${id}`}>
-							<article class=''>
-								<div>
-									<h2>{position}</h2>
-								</div>
-							</article>
-						</a>
-					</li>
+	<div class='flex flex-row justify-start items-start gap-4 xl:gap-8'>
+		<section class='bg-black px-6 py-12 rounded-3xl'>
+			<ul class='flex flex-col gap-7'>
+				{#each offers as { position, id, company, published } (id)}
+					<OfferItem {id} {user} {position} logoCompany={company.logo} updatedAt={published}
+										 nameCompany={company.name} />
 				{/each}
 			</ul>
 		</section>

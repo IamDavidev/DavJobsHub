@@ -9,17 +9,15 @@
 </script>
 
 
-<main>
-	<h1>{user}</h1>
-<!--	<h2 class='text-green text-3xl'>{status}</h2>-->
-<!--	<ul>-->
-<!--		{#each offers as { position } }-->
-<!--			<li>-->
-<!--				<article>-->
-<!--					<h2>{position}</h2>-->
-<!--				</article>-->
-<!--			</li>-->
-
-<!--		{/each}-->
-<!--	</ul>-->
+<svelte:head>
+	<title>
+		Offers for {user} | DavJobsHub
+	</title>
+</svelte:head>
+<main class='bg-black px-6 py-12 rounded-3xl w-full h-full '>
+	<div class='h-full'>
+		<h1>
+			Offers for {user}
+		</h1>
+	</div>
 </main>

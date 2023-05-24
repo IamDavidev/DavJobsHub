@@ -1,6 +1,8 @@
-import { getOffersService } from '~lib/services/getOffers.service';
-import type { TopLangs } from '~lib/interfaces/RepositoryGithubApi';
-import type { OfferItemAdapter } from '~lib/interfaces/Offer.interface';
+import { getOffersService } from '~lib/services/getOffers.service'
+import type { TopLangs } from '~lib/interfaces/RepositoryGithubApi'
+import type { OfferItemAdapter } from '~lib/interfaces/Offer.interface'
+import { checkUserExistenceService } from '~lib/services/checkUserExistence.service'
+import { getTopLangsUserService } from '~lib/services/getTopLangsUser.service'
 
 interface LoadParams {
 	params: {
@@ -21,27 +23,32 @@ interface LoadResponseError {
 
 
 export async function load({ params }: LoadParams): Promise<LoadResponseSuccess | LoadResponseError> {
-
-	const user = params.user;
+	const user = params.user
 	
-	const mockTopLangs: TopLangs = new Map([
-		['JavaScript', 1]
-	]);
+	const userFound = await checkUserExistenceService(user)
+	if (!userFound) return {
+		status: 404,
+		error: 'User not found'
+	}
 
-	const [data, error] = await getOffersService(mockTopLangs);
+	const [topLangUser, errroTopLangs] = await getTopLangsUserService(user)
+	if (errroTopLangs !== null && topLangUser === null) return {
+		status: errroTopLangs.status,
+		error: errroTopLangs.error ?? ''
+	}
 
-
-	if (error !== null) {
+	const [data, errorOffers] = await getOffersService(topLangUser as TopLangs)
+	if (errorOffers !== null) {
 		return {
-			status: error.status,
-			error: error.error ?? ''
-		};
+			status: errorOffers.status,
+			error: errorOffers.error ?? ''
+		}
 	}
 
 	return {
 		status: 200,
 		user,
 		offers: data ?? []
-	};
+	}
 
 }

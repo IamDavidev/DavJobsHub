@@ -8,22 +8,18 @@
 	const offers = data.offers as OfferItemAdapter[];
 </script>
 
-<head>
-	<title>
-		{user} | offers
-	</title>
-</head>
+
 <main>
 	<h1>{user}</h1>
-	<h2 class='text-green text-3xl'>{status}</h2>
-	<ul>
-		{#each offers as { position } }
-			<li>
-				<article>
-					<h2>{position}</h2>
-				</article>
-			</li>
+<!--	<h2 class='text-green text-3xl'>{status}</h2>-->
+<!--	<ul>-->
+<!--		{#each offers as { position } }-->
+<!--			<li>-->
+<!--				<article>-->
+<!--					<h2>{position}</h2>-->
+<!--				</article>-->
+<!--			</li>-->
 
-		{/each}
-	</ul>
+<!--		{/each}-->
+<!--	</ul>-->
 </main>

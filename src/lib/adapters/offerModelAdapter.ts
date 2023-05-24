@@ -10,12 +10,13 @@ export function offerModelAdapter(offer: OfferApiItemExtends): OfferModel {
 	const months = Math.ceil(days / 30);
 	const years = Math.ceil(months / 12);
 
-	let updatedAt = '';
+	let updatedAt = 'Hoy';
 
-	if (years > 0) updatedAt = `${years} años`;
-	else if (months > 0) updatedAt = `${months} meses`;
-	else if (days > 0) updatedAt = `${days} días`;
-	else updatedAt = 'Hoy';
+	if(days > 2 && days < 29) updatedAt = `${days} días`;
+	if(days > 30) updatedAt = `${months} meses`;
+	if(months > 12) updatedAt = `${years} años`;
+	
+	
 	
 	const company : CompanyOffer= {
 		id: offer.profile.id,

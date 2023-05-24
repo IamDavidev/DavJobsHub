@@ -2,24 +2,26 @@ import type { FailureResponseService } from '~lib/interfaces/FailureResponseServ
 import type { TopLangs } from '~lib/interfaces/RepositoryGithubApi';
 import { API_INFOJOBS } from '~lib/api/instances.api';
 import axios from 'axios';
-import type { OfferItemAdapter, OfferApiItem, ResponseOffersList } from '~lib/interfaces/Offer.interface';
+import type { OfferApiItem, OfferItemAdapter, ResponseOffersList } from '~lib/interfaces/Offer.interface';
 import { offersItemAdapterAdapter } from '~lib/adapters/offersItemAdapter.adapter';
 
 type responseGetOffersService = [OfferItemAdapter[] | null, FailureResponseService | null];
 
 export async function getOffersService(topLangs: TopLangs): Promise<responseGetOffersService> {
+	// const abortControllers: AbortController[] = Array.from(topLangs.keys()).map(() => new AbortController());
 	const languages = Array.from(topLangs.keys());
 
 	try {
-		const requests = languages.map((lang: string) => API_INFOJOBS.get('/api/9/offer', {
+		const requests = languages.map((lang: string, _index: number) => API_INFOJOBS.get('/api/9/offer', {
 			params: {
 				q: lang,
 				category: 'informatica-telecomunicaciones',
 				maxResults: 15
 			}
+			// signal: abortControllers[index].signal
 		}));
 
-		const offers : Set<OfferApiItem>= new Set<OfferApiItem>();
+		const offers: Set<OfferApiItem> = new Set<OfferApiItem>();
 
 		await axios.all(requests).then(axios.spread((...responses) => {
 			responses.forEach(({ data }: {
@@ -33,6 +35,7 @@ export async function getOffersService(topLangs: TopLangs): Promise<responseGetO
 
 		return [Array.from(offers).map(offersItemAdapterAdapter), null];
 	} catch (e) {
+		// abortControllers.forEach((abortController) => abortController.abort());
 		const { message } = e as Error;
 		const failureResponse: FailureResponseService = {
 			status: 404,

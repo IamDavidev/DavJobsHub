@@ -8,12 +8,10 @@
 
 	const offers = data?.offers as OfferItemAdapter[] ?? []
 	const user = data?.user as string ?? ''
-	
-	console.log(offers)
 </script>
 
 {#if !error}
-	<div class='flex flex-row justify-start items-start gap-4 xl:gap-8'>
+	<div class='flex flex-row justify-start items-start gap-4 xl:gap-8 relative'>
 		<section class='bg-black px-6 py-12 rounded-3xl'>
 			<ul class='flex flex-col gap-7'>
 				{#each offers as { position, id, company, published } (id)}

@@ -88,6 +88,7 @@ export interface Profile {
 	showCorporativeHeader: boolean;
 	clientId: number;
 	followable: boolean;
+	logoUrl?: string;
 }
 
 export interface SkillItem {
@@ -153,6 +154,7 @@ export interface Author {
 	uri: string;
 	corporateResponsive: boolean;
 	showCorporativeHeader: boolean;
+	logoUrl?: string;
 }
 
 export interface Category {
@@ -166,9 +168,10 @@ export interface OfferItemAdapter {
 	company: CompanyOffer;
 	published: Date;
 	city: string;
+	logoUrl?: string;
 }
 
-export interface OfferModel   {
+export interface OfferModel {
 	id: string;
 	company: CompanyOffer;
 	published: Date;

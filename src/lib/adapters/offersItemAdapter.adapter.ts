@@ -9,7 +9,8 @@ export function offersItemAdapterAdapter(offer: OfferApiItem): OfferItemAdapter 
 		company: {
 			id: offer.author.id,
 			name: offer.author.name,
-			uri: offer.author.uri
+			uri: offer.author.uri,
+			logo: offer.author?.logoUrl ?? ''
 		},
 		published: offer.updated,
 		city: offer.city

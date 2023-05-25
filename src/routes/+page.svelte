@@ -8,7 +8,7 @@
 		e.preventDefault()
 		const { githubUser } = e.target
 
-		await goto(`jobs/github/${githubUser.value}`)
+		await goto(`jobs/github/${githubUser.value}/`)
 	}
 
 </script>

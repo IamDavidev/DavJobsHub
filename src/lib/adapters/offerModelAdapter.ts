@@ -24,7 +24,7 @@ export function offerModelAdapter(offer: OfferApiItemExtends): OfferModel {
 		web: offer.profile.websiteUrl,
 		description: offer.profile.description,
 		name: offer.profile.name,
-		
+		logo: offer.profile.logoUrl
 	}
 
 

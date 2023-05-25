@@ -14,10 +14,10 @@
 		Offers for {user} | DavJobsHub
 	</title>
 </svelte:head>
-<main class='bg-black px-6 py-12 rounded-3xl w-full h-full '>
+<div class='bg-black px-6 py-12 rounded-3xl w-full h-full '>
 	<div class='h-full'>
 		<h1>
 			Offers for {user}
 		</h1>
 	</div>
-</main>
+</div>

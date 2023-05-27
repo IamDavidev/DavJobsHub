@@ -17,7 +17,7 @@
 
 </script>
 
-<h2 class='text-white text-3xl text-center font-bold'>
+<h2 class='text-white text-4xl text-center font-bold'>
 	Search by User
 	<span class='text-blue'>
 				Github

@@ -1,16 +1,26 @@
 <script lang='ts'>
+	import { goto } from '$app/navigation'
+	
 	import UserIcon from '~routes/components/icons/UserIcon.svelte'
+	import { formatUserURL } from '~lib/utils/formatUserURL'
+	import type { OptionsGoTo } from '~lib/interfaces/OptionsGoTo.interface'
+
 	
 	export let user: string
-	export let langs : string[]
-	
+	export let langs: string[]
+
 	let newUser: string
-	
-	function handler(e: SubmitEvent){
+
+	async function handler(e: SubmitEvent) {
 		e.preventDefault()
-		console.log(newUser)
+		
+		const options: OptionsGoTo = {
+			replaceState: true
+		}
+
+		await goto(formatUserURL(newUser), options)
 	}
-	
+
 </script>
 
 <div class='mb-12 flex flex-col gap-8 justify-center items-center mt-4 relative z-30'>

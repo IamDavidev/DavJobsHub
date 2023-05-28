@@ -1,18 +1,18 @@
 <script lang='ts'>
-
-	// let githubUser = ''
-	let githubUser = 'Midudev'
-
 	import { goto } from '$app/navigation'
-
+	
+	import type { OptionsGoTo } from '~lib/interfaces/OptionsGoTo.interface'
+	import { formatUserURL } from '~lib/utils/formatUserURL.js'
+	
+	
+	let githubUser = 'Midudev'
+	
 	async function handler(e: SubmitEvent) {
 		e.preventDefault()
-		const { githubUser } = e.target
-
-		await goto(`jobs/github/${githubUser.value}/`, {
+		const options:OptionsGoTo  = {
 			replaceState: true
-		})
-
+		}
+		await goto(formatUserURL(githubUser), options))
 	}
 
 </script>

@@ -33,12 +33,12 @@
 			name='githubUser'
 			id='githubUser'
 			type='text'
-			class=' border border-green-500 rounded-lg w-[320px] p-2 focus:outline-none focus:ring-2 focus:ring-blue focus:border-transparent text-black'
+			class=' border border-green-500 rounded-lg w-full min-w-[240px] md:min-w-fit  md:w-[380px] p-4 focus:outline-none focus:ring-2 focus:ring-blue focus:border-transparent text-black'
 			placeholder='user github'
 			value={githubUser}
 		/>
 	</labeL>
-	<div class='flex justify-end items-center my-4 w-[320px]'>
+	<div class='flex justify-end items-center my-4 w-full min-w-[240px] md:min-w-fit  md:w-[380px] '>
 		<button
 			type='submit'
 			class='bg-black border border-solid text-white border-cream rounded-lg py-2 px-8 hover:border-blue hover:bg-[rgba(0,0,0,0)] hover:text-blue hover:transition-all hover:duration-500'

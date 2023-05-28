@@ -3,7 +3,6 @@
 	import HeaderHome from '~routes/components/HeaderHome.svelte'
 	import FormSearchGithub from '~routes/components/FormSearchGithub.svelte'
 	import UserToTest from '~routes/components/UserToTest.svelte'
-	import CircleIcon from '~routes/components/icons/CircleIcon.svelte'
 	import BlobIcon from '~routes/components/icons/BlobIcon.svelte'
 </script>
 
@@ -19,6 +18,10 @@
 		<FormSearchGithub />
 		<UserToTest />
 	</section>
-	<BlobIcon className=' absolute top-0 left-0' />
-	<BlobIcon className=' absolute top-0 right-0  rotate-180' />
+	<span class=' absolute top-0 left-0 w-full h-full overflow-hidden'>
+		<BlobIcon  className='w-full h-full'/>
+	</span>
+	<span class=' absolute top-0 right-0 w-full h-full overflow-hidden'>
+		<BlobIcon className='w-ful h-full'/>
+	</span>
 </div>

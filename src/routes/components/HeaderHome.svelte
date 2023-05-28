@@ -4,7 +4,7 @@
 </script>
 
 <section class='py-12 flex flex-row gap-16 justify-evenly items-center'>
-	<div class='flex flex-col gap-4'>
+	<div class='flex flex-col gap-4  relative z-50'>
 		<h1 class='text-7xl font-bold text-white flex flex-row gap-0'>
 			<span class=''>Dav</span>
 			<span class='text-blue'>Jobs</span>

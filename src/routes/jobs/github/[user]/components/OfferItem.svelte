@@ -5,7 +5,7 @@
 	export let logoCompany
 	export let position: string
 	export let nameCompany
-	export let updatedAt
+	// export let updatedAt
 
 
 	const href = `/jobs/github/${user}/offer/${id}`
@@ -19,8 +19,8 @@
 	<a {href}>
 		<article class='flex flex-row gap-4 w-full'>
 			<picture class='min-w-[160px] h-[124px] max-w-[140px] max-h-[124px] flex'>
-<!--								<img src={logoCompany} alt={nameCompany} class='w-full h-full object-cover rounded-2xl' />-->
-				<img src={"/planetFake.jpg"} alt={"planet-fake"} class='w-full h-full object-cover rounded-2xl' />
+				<img src={logoCompany} alt={nameCompany} class='w-full h-full object-cover rounded-2xl' />
+				<!--				<img src={"/planetFake.jpg"} alt={"planet-fake"} class='w-full h-full object-cover rounded-2xl' />-->
 			</picture>
 			<header class='flex flex-row justify-between py-4 gap-4 w-full'>
 				<div class='flex flex-col h-full justify-between items-start'>

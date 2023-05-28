@@ -33,9 +33,8 @@ export async function getOffersService(topLangs: TopLangs): Promise<responseGetO
 			});
 		}));
 
-		return [Array.from(offers).map(offersItemAdapterAdapter), null];
+		return [(Array.from(offers).map(offersItemAdapterAdapter)), null];
 	} catch (e) {
-		// abortControllers.forEach((abortController) => abortController.abort());
 		const { message } = e as Error;
 		const failureResponse: FailureResponseService = {
 			status: 404,

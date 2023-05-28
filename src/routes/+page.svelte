@@ -15,7 +15,7 @@
 
 <div class='min-w-full w-full min-h-full relative'>
 	<HeaderHome />
-	<section class='h-full w-full my-6rounded-3xl flex flex-col gap-8 p-20'>
+	<section class='h-full w-full my-6 rounded-3xl flex flex-col gap-8 p-20 relative z-50'>
 		<FormSearchGithub />
 		<UserToTest />
 	</section>

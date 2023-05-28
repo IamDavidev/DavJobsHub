@@ -55,7 +55,7 @@
 			</header>
 			<section class='preview-offer'>
 				<ul class='flex flex-col gap-7'>
-					{#each offers as { position, id, company, published } (id)}
+					{#each offers as { position, id, company, published }}
 						<OfferItem {id} {user} {position} logoCompany={company.logo} updatedAt={published}
 											 nameCompany={company.name} />
 					{/each}
@@ -65,7 +65,7 @@
 		<!-- * @children -->
 		<slot></slot>
 	</div>
-	<img src='/bg-stars.webp' alt='bg github' class='absolute top-0 left-0 w-full h-full opacity-50'>
+<!--	<img src='/bg-stars.webp' alt='bg github' class='absolute top-0 left-0 w-full h-full opacity-50 object-cover'>-->
 {/if}
 
 {#if error}

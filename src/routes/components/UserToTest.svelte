@@ -17,7 +17,7 @@
 	<span class='text-bold tex-white text-2xl opacity-70 text-center'>
 		Try with:	
 	</span>
-	<ul class='flex flex-row justify-center gap-8 items-center flex-wrap'>
+	<ul class='flex flex-row justify-center gap-8 items-center flex-wrap h-auto py-4'>
 		{#each users as user}
 			<li class='w-auto h-auto'>
 				<a href={`/jobs/github/${user.githubUser}/`}

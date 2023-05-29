@@ -18,10 +18,10 @@
 		<FormSearchGithub />
 		<UserToTest />
 	</section>
-	<span class=' absolute top-0 left-0 w-full h-full overflow-hidden'>
-		<BlobIcon  className='w-full h-full'/>
+	<span class=' absolute -top-0 left-0 w-full h-full overflow-hidden flex justify-start'>
+		<BlobIcon  className='w-auto h-auto'/>
 	</span>
-	<span class=' absolute top-0 right-0 w-full h-full overflow-hidden'>
-		<BlobIcon className='w-ful h-full'/>
+	<span class=' absolute top-0 right-0 w-full h-full overflow-hidden flex justify-end'>
+		<BlobIcon className='w-auto h-auto'/>
 	</span>
 </div>

@@ -16,7 +16,7 @@
 
 {#if !error}
 	<HeaderJobsList {user}  {langs} />
-	<div class='flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-8 relative z-30'>
+	<div class='flex flex-col lg:flex-row justify-start items-start gap-4 xl:gap-8 relative z-30'>
 		<!-- * @ Grid offers		+layout-->
 		<GridOffers {offers} {user} />
 		<!-- * @children  +page-->

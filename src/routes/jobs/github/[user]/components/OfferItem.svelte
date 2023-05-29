@@ -15,11 +15,11 @@
 </script>
 
 <li {id}
-		class='min-w-[320px] lg:max-w-[320px] xl:max-w-[640px] w-full xl:min-w-[480px] border-white border-solid border-r xl:border-r-0 xl:border-t pt-4 text-white text-base p-4'>
+		class='xl:min-w-[320px] xl:min-w-auto w-full border-white border-solid border-r lg:border-r-0 lg:border-t pt-4 text-white text-base p-4'>
 	<a {href}>
 		<article class='flex flex-col xl:flex-row gap-4 w-full'>
-			<picture class='min-w-[160px] h-[124px] lg:max-w-[140px] max-h-[124px] flex m-auto max-w-fit'>
-								<img src={"/planetFake.jpg"} alt={"planet-fake"} class='w-full h-full object-cover rounded-2xl' />
+			<picture class='min-w-[240px] xl:min-w-[160px] xl:h-[124px] lg:max-w-[140px] max-h-[124px] flex m-auto max-w-fit'>
+				<img src={"/planetFake.jpg"} alt={"planet-fake"} class='w-full h-full object-cover rounded-2xl' />
 			</picture>
 			<header class='flex flex-col xl:flex-row justify-between py-4 gap-4 w-full'>
 				<div class='flex flex-col h-full justify-between items-center xl:items-start text-center xl:text-left gap-2'>
@@ -32,7 +32,8 @@
 						<span>{"Day a go "}</span>
 					</div>
 				</div>
-				<div class='h-full flex flex-row xl:flex-col gap-0  items-end opacity-50 font-medium text-sm text-center lg:text-left w-full justify-between'>
+				<div
+					class='h-full flex flex-row xl:flex-col gap-0  items-end opacity-50 font-medium text-sm text-center lg:text-left w-full justify-between'>
 					<span class='text-end'>Remote Work</span>
 					<span class='text-end'>Junior</span>
 				</div>

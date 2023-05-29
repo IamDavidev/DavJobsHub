@@ -12,7 +12,7 @@
 		const options:OptionsGoTo  = {
 			replaceState: true
 		}
-		await goto(formatUserURL(githubUser), options))
+		await goto(formatUserURL(githubUser), options)
 	}
 
 </script>

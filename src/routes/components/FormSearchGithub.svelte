@@ -9,6 +9,8 @@
 	
 	async function handler(e: SubmitEvent) {
 		e.preventDefault()
+		if(!githubUser) return
+		
 		const options:OptionsGoTo  = {
 			replaceState: true
 		}
@@ -35,7 +37,7 @@
 			type='text'
 			class=' border border-green-500 rounded-lg w-full min-w-[240px] md:min-w-fit  md:w-[380px] p-4 focus:outline-none focus:ring-2 focus:ring-blue focus:border-transparent text-black'
 			placeholder='user github'
-			value={githubUser}
+			bind:value={githubUser}
 		/>
 	</labeL>
 	<div class='flex justify-end items-center my-4 w-full min-w-[240px] md:min-w-fit  md:w-[380px] '>

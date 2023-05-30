@@ -5,13 +5,13 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		interface Platform {
-			env: {
-				INFOJOBS_TOKEN: string
-				TOKEN_GIT: string
-				OPENIA_API_KEY: string
-			}
-		}
+		// interface Platform {
+		// 	env: {
+		// 		INFOJOBS_TOKEN: KVnamespace
+		// 		TOKEN_GIT: KVnamespace
+		// 		OPENIA_API_KEY: KVnamespace
+		// 	}
+		// }
 	}
 }
 

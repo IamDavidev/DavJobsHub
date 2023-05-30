@@ -27,7 +27,7 @@
 	<AboutClient companyName={offer.company.name} location={"missing"} salaryDescription={offer.salaryDescription}>
 <!--		<TestProfile githubUser={user} offerId={offerId} position={offer.position} />-->
 		<a href={urlTestProfile}
-			 class='w-full py-2 rounded-2xl text-black text-center bg-gradient-to-r from-[#F88EFD] to-[#0FA47F] transition-all duration-300 font-bold '
+			 class='w-full py-2 rounded-2xl text-black text-center bg-gradient-to-r from-[#F88EFD] to-[#0FA47F] transition-all duration-300 font-bold hover:shadow-lg hover:scale-105 '
 		>
 			test profile
 		</a>

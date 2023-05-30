@@ -31,7 +31,9 @@
     }
     
 }
-
+.animate-spin-slow{
+    animation: spin 3s linear infinite;
+}
 
 html {
     scroll-padding-block-end: 4px;

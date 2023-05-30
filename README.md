@@ -1,3 +1,7 @@
+<div align="center">
+ <img src="/images-static/davjobshub-image.png" alt="Dblog" width="1080"/>
+</div>
+
 # INFOJOBS HACKATHON 2023
 
 ## Project description

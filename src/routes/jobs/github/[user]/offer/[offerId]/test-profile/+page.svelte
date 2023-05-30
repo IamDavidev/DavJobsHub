@@ -151,6 +151,17 @@
 							Test profile
 						</button>
 					</form>
+					<div
+						class='flex justify-center items-center flex-col gap-4 relative mt-8 pt-4 before:bg-white before:w-[60%] before:h-1  before:absolute before:top-0 before:left-[20%]'>
+						<h3 class='text-white opacity-80 text-base text-center w-full'>
+							If you don't receive the feedback and you are only returned to the form, it is because it is in beta
+							(server doesn't allow to wait for the call).
+							please contact support or view a demo
+						</h3>
+						<a
+							class='text-xl text-blue text-base text-center w-full hover:underline hover:transition-all hover:duration-500'
+							href='https://www.loom.com/share/c1980596c6584d29a4d5a7aceb4c62a3' target='_blank'>Demo</a>
+					</div>
 				</div>
 			</div>
 		{/if}

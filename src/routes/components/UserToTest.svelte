@@ -5,9 +5,9 @@
 	}, {
 		githubUser: 'IamDavidev'
 	}, {
-		githubUser: 'undefinded'
+		githubUser: 'antfu'
 	}, {
-		githubUser: 'midudev'
+		githubUser: 'pheralb'
 	}]
 
 

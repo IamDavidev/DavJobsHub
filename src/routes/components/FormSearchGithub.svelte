@@ -5,7 +5,7 @@
 	import { formatUserURL } from '~lib/utils/formatUserURL.js'
 	
 	
-	let githubUser = 'Midudev'
+	let githubUser = ''
 	
 	async function handler(e: SubmitEvent) {
 		e.preventDefault()

@@ -6,25 +6,41 @@ import type { OfferModel } from '~lib/interfaces/Offer.interface';
 interface LoadParams {
 	params: {
 		offerId: string
+		user: string
 	}
 }
 
 interface LoadResponseSuccess {
+	user: string
 	status: number | string;
 	offerId: string
 	offer: OfferModel | null
 }
 
 export async  function load({params: {
-	offerId
+	offerId,
+	user
 }}:LoadParams): Promise<LoadResponseSuccess>{
 	
 	const [data,error] = await getOfferByIdService(offerId)
-	
-	const offerMock = data ?? null
-	
-	
+
+	const offer = data ?? null
+
+
 	if(error!== null) throw errorPage(404,error.error ?? "")
+	
+	console.log("Page server offer id")
+
+	return {
+		status: 200,
+		offerId,
+		offer,
+		user
+	}
+
+	
+	
+	
 	
 	// const offerMock  : OfferModel= {
 	// 	id: "18018",
@@ -47,11 +63,14 @@ export async  function load({params: {
 	// 	contractType : "Full-time",
 	// 	salaryDescription: "Competitive salary and benefits package",
 	// } 
-	
-	return {
-		status: 200,
-		offerId,
-		offer: offerMock
-	}
-	
+	//
+	// return {
+	// 	status: 200,
+	// 	offerId,
+	// 	user,
+	// 	offer: offerMock
+	// }
+
 }
+
+export const csr = false

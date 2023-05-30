@@ -1,11 +1,11 @@
 <script lang='ts'>
 	import { goto } from '$app/navigation'
-	
+
 	import UserIcon from '~routes/components/icons/UserIcon.svelte'
 	import { formatUserURL } from '~lib/utils/formatUserURL'
 	import type { OptionsGoTo } from '~lib/interfaces/OptionsGoTo.interface'
 
-	
+
 	export let user: string
 	export let langs: string[]
 
@@ -13,12 +13,14 @@
 
 	async function handler(e: SubmitEvent) {
 		e.preventDefault()
-		
+
 		const options: OptionsGoTo = {
 			replaceState: true
 		}
 
-		await goto(formatUserURL(newUser), options)
+		const newUserFmt = newUser.trim().replace(/\s+/g, '-').toLowerCase()
+
+		await goto(formatUserURL(newUserFmt), options)
 	}
 
 </script>
@@ -47,7 +49,7 @@
 	<div class='flex flex-row justify-center gap-8 flex-wrap'>
 		{#each langs as lang}
 			<span
-				class='bg-black  px-12 py-2 rounded-2xl font-base text-white'
+				class='bg-cream  px-12 py-2 rounded-2xl font-base text-black'
 			>
 				{lang}
 			</span>

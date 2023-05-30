@@ -6,8 +6,8 @@
 </script>
 
 <header class='flex flex-row gap-4 w-full border-b border-white border-solid pb-8'>
-<!--				<img src={logo} alt={name} class='h-[124px] w-[124px] rounded-2xl' />-->
-	<img src='/planetFake.jpg' alt='google ' class='h-[124px] w-[124px] rounded-2xl object-cover' />
+	<img src={companyLogo} alt={companyName} class='h-[124px] w-[124px] rounded-2xl object-cover' />
+	<!--	<img src='/planetFake.jpg' alt='google ' class='h-[124px] w-[124px] rounded-2xl object-cover' />-->
 	<div class='w-full'>
 		<div class='flex h-full flex-col justify-evenly'>
 			<h2 class='text-2xl font-bold text-white'>{position}</h2>

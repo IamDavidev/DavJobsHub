@@ -5,14 +5,16 @@
 </script>
 <div class='py-8 flex flex-col gap-12'>
 	<div>
-		<h3 class='text-2xl font-bold'>Job Description : </h3>
+		<h3 class='text-lg xl:text-xl  2xl:text-2xl font-bold'>
+			Job Description :
+		</h3>
 		<p class='py-2 font-light'>
 			{jobDescription}
 		</p>
 	</div>
 	{#if minRequirements}
 		<div>
-			<h3 class='text-2xl font-bold'>
+			<h3 class='text-lg xl:text-xl  2xl:text-2xl font-bold'>
 				Min Requirements :
 			</h3>
 			<p class='py-2 font-light'>

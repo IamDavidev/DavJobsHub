@@ -5,15 +5,17 @@
 	export let data
 
 	const offer = data.offer as OfferModel
+	const user = data.user as string
+	
+	console.log("OFFER RENDER")
 
-	console.log(offer)
 </script>
 
 <svelte:head>
 	<title>
-		Offers for {offer.name} | DavJobsHub
+		Offers for {user} | DavJobsHub
 	</title>
 </svelte:head>
 
 
-<PreviewOffer {offer} />
+<PreviewOffer {offer} {user} />

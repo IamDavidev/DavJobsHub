@@ -15,7 +15,7 @@
 	</title>
 </svelte:head>
 <div
-	class='bg-[rgba(0,0,0,0)] border border-white border-solid  px-6 py-12 rounded-3xl w-full h-full min-h-[480px]  sticky top-4  flex justify-center items-center'>
+	class='bg-[#121212] border border-white border-solid  px-6 py-12 rounded-3xl w-full h-full min-h-[480px]  sticky top-4  flex justify-center items-center'>
 	<h1 class=' text-3xl font-bold text-center'>
 		<span class='text-white opacity-80 block'>
 			Select an offer to see

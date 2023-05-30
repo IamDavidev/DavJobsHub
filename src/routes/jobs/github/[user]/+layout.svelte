@@ -27,8 +27,8 @@
 			</header>
 			<div class='w-full'>
 				<ul class='flex flex-row lg:flex-col gap-2'>
-					{#each offers as { position, id, company, published }}
-						<OfferItem {id} {user} {position} logoCompany={company.logo} updatedAt={published}
+					{#each offers as { position, id, company, published, contractType,updatedAt }}
+						<OfferItem {contractType} {id} {user} {position} logoCompany={company.logo} updatedAt={updatedAt} published={published}
 											 nameCompany={company.name} />
 					{/each}
 				</ul>

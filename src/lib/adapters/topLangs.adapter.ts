@@ -6,8 +6,7 @@ export function topLangsAdapter(repositories: ResponseRepositories, max: number)
 
 	const languages = repositories.map((repo: RepositoryGithubApi) => {
 		return repo?.language
-	}).slice(0, max) as string[]
-
+	})
 
 	languages.forEach((language: string): void => {
 		if (!language) return
@@ -15,6 +14,6 @@ export function topLangsAdapter(repositories: ResponseRepositories, max: number)
 		else topLangs.set(language, 1)
 	})
 
-	return topLangs
+	return new Map(Array.from(topLangs).slice(0, max))
 }
 

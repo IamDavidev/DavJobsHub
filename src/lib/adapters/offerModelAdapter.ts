@@ -1,22 +1,12 @@
 import type { CompanyOffer, OfferApiItemExtends, OfferModel, SkillItem } from '~lib/interfaces/Offer.interface';
+import { formatDate } from '~lib/utils/formatDate'
 
 
 export function offerModelAdapter(offer: OfferApiItemExtends): OfferModel {
 	const skills = offer.skillsList.map((s: SkillItem) => s.skill);
-	// const published = new Date(offer.updateDate)
-
-	const diff = Math.abs(new Date().getTime() - new Date(offer.updateDate).getTime());
-	const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-	const months = Math.ceil(days / 30);
-	const years = Math.ceil(months / 12);
-
-	let updatedAt = 'Hoy';
-
-	if(days > 2 && days < 29) updatedAt = `${days} días`;
-	if(days > 30) updatedAt = `${months} meses`;
-	if(months > 12) updatedAt = `${years} años`;
 	
 	
+	const updatedAt = formatDate(new Date(offer.updateDate))
 	
 	const company : CompanyOffer= {
 		id: offer.profile.id,

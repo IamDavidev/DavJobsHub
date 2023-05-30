@@ -5,8 +5,8 @@
 	export let logoCompany
 	export let position: string
 	export let nameCompany
+	// export let contractType
 	// export let updatedAt
-
 
 	const href = `/jobs/github/${user}/offer/${id}/`
 	const positionFmt = (position.length > 47 ? position.substring(0, 50) + ' ...' : position)
@@ -33,11 +33,11 @@
 <!--						<span>{"Day a go "}</span>-->
 					</div>
 				</div>
-				<div
-					class='h-full flex flex-row xl:flex-col gap-0  items-end opacity-50 font-medium text-sm text-center lg:text-left w-full justify-between'>
-					<span class='text-end'>Remote Work</span>
-					<span class='text-end'>Junior</span>
-				</div>
+<!--				<div-->
+<!--					class='h-full flex flex-row xl:flex-col gap-0  items-end opacity-50 font-medium text-sm text-center lg:text-left w-full justify-between'>-->
+<!--					<span class='text-end'>{contractType}</span>-->
+<!--					<span class='text-end'>{updatedAt}</span>-->
+<!--				</div>-->
 			</header>
 		</article>
 	</a>

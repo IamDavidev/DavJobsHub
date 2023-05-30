@@ -7,7 +7,6 @@
 	const offer = data.offer as OfferModel
 	const user = data.user as string
 	
-	console.log("OFFER RENDER")
 
 </script>
 

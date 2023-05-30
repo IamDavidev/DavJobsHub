@@ -1,8 +1,7 @@
 <script lang='ts'>
 
-	export let color: string | undefined = "currentColor"
 	export let stroke: string
-	export let className: string = "w-6 h-6"
+	export let className: string
 
 </script>
 

@@ -1,6 +1,5 @@
 <script lang='ts'>
 	export let companyName
-	export let location
 	export let salaryDescription
 </script>
 

@@ -41,5 +41,5 @@
 {/if}
 
 {#if error}
-	<p>{error.}</p>
+	<p>{error}</p>
 {/if}
